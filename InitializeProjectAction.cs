@@ -72,6 +72,11 @@ namespace DirTemplateExtension
 
         private void InitializeDirectories(DirectoryInfo templateDir, IEnumerable<DirectoryInfo> targetDirs)
         {
+            if (_targetDirs.Count == 0)
+            {
+                Logger.WriteLog("Received an empty list of target directories.", EventLogEntryType.Error);
+            }
+
             foreach (var targetDir in targetDirs.TakeWhile(targetDir => !_worker.CancellationPending))
             {
                 Logger.Debug($"Processing target dir '{targetDir}'");

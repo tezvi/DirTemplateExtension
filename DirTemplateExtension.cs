@@ -18,13 +18,15 @@ namespace DirTemplateExtension
     {
         protected override bool CanShowMenu()
         {
-            Logger.Debug(
-                $"CanShowMenu result for FolderPath: ({IsSupportedDirectory(FolderPath)})['{string.Join("; ", FolderPath)}']; result for SelectedItemPaths: ({SelectedItemPaths.All(IsSupportedDirectory)}) ['{string.Join("; ", SelectedItemPaths)}']");
             var selectedDirCount = SelectedItemPaths.Count();
+            var selectedFoldersValid = selectedDirCount > 0 &&
+                              SelectedItemPaths.Count(IsSupportedDirectory) == selectedDirCount;
 
-            return IsSupportedDirectory(FolderPath) || (selectedDirCount > 0 &&
-                                                        SelectedItemPaths.Count(IsSupportedDirectory) ==
-                                                        selectedDirCount);
+            Logger.Debug(
+                $"CanShowMenu result for FolderPath: ({IsSupportedDirectory(FolderPath)})['{string.Join("; ", FolderPath)}']; result for SelectedItemPaths: ({selectedFoldersValid}) ['{string.Join("; ", SelectedItemPaths)}']");
+
+            
+            return IsSupportedDirectory(FolderPath) || selectedFoldersValid;
         }
 
         protected override ContextMenuStrip CreateMenu()
@@ -171,7 +173,14 @@ namespace DirTemplateExtension
         {
             Logger.Debug(
                 $"InitializeDirFromTemplate for SelectedItemPaths['{string.Join(", ", SelectedItemPaths)}'] and FolderPath ({FolderPath})");
-            InitializeProjectAction.Build(templateDir, SelectedItemPaths.ToList())
+
+            var dirList = SelectedItemPaths.ToList();
+            if (!string.IsNullOrEmpty(FolderPath) && !dirList.Contains(FolderPath))
+            {
+                dirList.Add(FolderPath);
+            }
+
+            InitializeProjectAction.Build(templateDir, dirList)
                 .Start();
         }
     }

@@ -76,7 +76,7 @@ namespace DirTemplateExtension
             this.test5ToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(105, 26);
             // 
             // test5ToolStripMenuItem
             // 
@@ -84,7 +84,7 @@ namespace DirTemplateExtension
             this.test5ToolStripMenuItem.Image = global::DirTemplateExtension.Resources.InitProject;
             this.test5ToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.test5ToolStripMenuItem.Name = "test5ToolStripMenuItem";
-            this.test5ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.test5ToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
             this.test5ToolStripMenuItem.Text = "Test 5";
             // 
             // FormProgress
@@ -100,7 +100,7 @@ namespace DirTemplateExtension
             this.Name = "FormProgress";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "New project wizard";
             this.TopMost = true;
             this.contextMenuStrip1.ResumeLayout(false);
