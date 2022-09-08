@@ -61,7 +61,7 @@ namespace DirTemplateExtension {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Create new project.
+        ///   Looks up a localized string similar to Create a new project.
         /// </summary>
         internal static string ContextMenu_CreateProject {
             get {
@@ -70,7 +70,7 @@ namespace DirTemplateExtension {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Initialize new project from directory..
+        ///   Looks up a localized string similar to Initialize a new project from directory..
         /// </summary>
         internal static string ContextMenu_CreateProjectTooltip {
             get {
@@ -97,11 +97,20 @@ namespace DirTemplateExtension {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Initializing new project from {0} template....
+        ///   Looks up a localized string similar to Initializing a new project from {0} template....
         /// </summary>
         internal static string FormProgress_StatusLabel {
             get {
                 return ResourceManager.GetString("FormProgress_StatusLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New project wizard.
+        /// </summary>
+        internal static string FormProgress_Title {
+            get {
+                return ResourceManager.GetString("FormProgress_Title", resourceCulture);
             }
         }
         

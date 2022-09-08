@@ -83,7 +83,7 @@ namespace DirTemplateExtension
 
                 if (!DirectoryUtils.IsDirectoryEmpty(targetDir))
                 {
-                    var dlgResult = MessageBox.Show(
+                    var dlgResult = MessageBox.Show(_formProgress,
                         string.Format(Resources.InitializeProjectAction_NotEmptyDirWarning, targetDir.FullName),
                         Resources.InitializeProjectAction_NotEmptyDirWarningTitle, MessageBoxButtons.YesNoCancel,
                         MessageBoxIcon.Warning);

@@ -118,10 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="ContextMenu_CreateProject" xml:space="preserve">
-    <value>Create new project</value>
+    <value>Create a new project</value>
   </data>
   <data name="ContextMenu_CreateProjectTooltip" xml:space="preserve">
-    <value>Initialize new project from directory.</value>
+    <value>Initialize a new project from directory.</value>
   </data>
   <data name="ContextMenu_ItemTooltip" xml:space="preserve">
     <value>Initialize this directory from template "{0}".</value>
@@ -168,6 +168,9 @@ Original error: {1}</value>
     <value>An error has occurred</value>
   </data>
   <data name="FormProgress_StatusLabel" xml:space="preserve">
-    <value>Initializing new project from {0} template...</value>
+    <value>Initializing a new project from {0} template...</value>
+  </data>
+  <data name="FormProgress_Title" xml:space="preserve">
+    <value>New project wizard</value>
   </data>
 </root>

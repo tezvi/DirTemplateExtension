@@ -81,7 +81,7 @@ namespace DirTemplateExtension
             try
             {
                 itemDir.ShowShortcutKeys = true;
-                itemDir.ShortcutKeys = Keys.LWin | Keys.Control | Keys.LShiftKey | parsedKey;
+                itemDir.ShortcutKeys = Keys.Control | Keys.Alt | Keys.LShiftKey | parsedKey;
                 itemDir.ShortcutKeyDisplayString = $"Ctrl + LWin + LShift + F{keyIndex}";
             }
             catch
